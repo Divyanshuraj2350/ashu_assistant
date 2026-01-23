@@ -84,6 +84,8 @@ python main.py --text
 - `skills/`: Directory containing all modular skills (plugins).
 - `assets/`: Images and resources for the GUI.
 
+## Thanks fir reading the file.
+
 ## License
 
 [MIT License](LICENSE) (or appropriate license)
