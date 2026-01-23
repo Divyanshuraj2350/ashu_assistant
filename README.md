@@ -84,6 +84,9 @@ python main.py --text
 - `skills/`: Directory containing all modular skills (plugins).
 - `assets/`: Images and resources for the GUI.
 
+##BIG UPDATE:
+- if you subscribe to my yt channel and did 100 subscribers. I will uplode a JARVIS for windoes. 
+
 ## License
 
 [MIT License](LICENSE) (or appropriate license)
