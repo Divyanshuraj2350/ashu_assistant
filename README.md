@@ -85,7 +85,9 @@ python main.py --text
 - `assets/`: Images and resources for the GUI.
 
 ##BIG UPDATE:
-- Currently this only works on Mac. If you subscribe to my yt channel and did 100 subscribers. I will uplode a JARVIS for windoes. 
+- Currently this only works on Mac. If you subscribe to my yt channel and did 100 subscribers. I will uplode a JARVIS for windoes.
+
+- THANK YOU FOR USING
 
 ## License
 
