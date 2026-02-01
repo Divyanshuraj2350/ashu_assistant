@@ -87,8 +87,6 @@ python main.py --text
 ##BIG UPDATE:
 - Currently this only works on Mac. If you subscribe to my yt channel and did 100 subscribers. I will uplode a JARVIS for windoes.
 
-- THANK YOU FOR USING
-
 ## License
 
 [MIT License](LICENSE) (or appropriate license)
