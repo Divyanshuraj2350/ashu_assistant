@@ -18,16 +18,16 @@ if not os.environ.get("GROQ_API_KEY"):
 
 def jarvis_loop(pause_event, registry, args):
     """
-    Main loop for JARVIS, running in a separate thread.
+    Main loop for ASHU, running in a separate thread.
     Checks pause_event to determine if it should listen/process.
     """
     # Initialize Engine
     jarvis = JarvisEngine(registry)
 
     if args.text:
-        print("JARVIS: Jarvis Online. Ready for command (Text Mode).")
+        print("ASHU: Ashu Online. Ready for command (Text Mode).")
     else:
-        speak("Jarvis Online. Ready for command.")
+        speak("Hello, I am Ashu Assistant")
 
     while True:
         # Check for pause
@@ -49,7 +49,7 @@ def jarvis_loop(pause_event, registry, args):
 
         if user_query == "none" or not user_query: continue
         if "quit" in user_query: 
-            print("Shutting down JARVIS loop...")
+            print("Shutting down ASHU loop...")
             # We can't easily kill the main thread (GUI) from here, 
             # but we can stop this loop. The user will have to close the GUI.
             speak("Shutting down.")
@@ -63,11 +63,11 @@ def jarvis_loop(pause_event, registry, args):
         
         is_direct = any(cmd in user_query for cmd in direct_commands)
         
-        if "jarvis" not in user_query and not is_direct:
+        if "ashu" not in user_query and not is_direct:
             print(f"Ignored: {user_query}")
             continue
             
-        clean_query = user_query.replace("jarvis", "").strip()
+        clean_query = user_query.replace("ashu", "").strip()
         
         try:
             print(f"Thinking: {clean_query}")
@@ -79,18 +79,18 @@ def jarvis_loop(pause_event, registry, args):
 
             if response:
                 if args.text:
-                    print(f"JARVIS: {response}")
+                    print(f"ASHU: {response}")
                 else:
                     speak(response)
         except Exception as e:
             print(f"Main Loop Error: {e}")
             if args.text:
-                print("JARVIS: System error.")
+                print("ASHU: System error.")
             else:
                 speak("System error.")
 
 def main():
-    parser = argparse.ArgumentParser(description="JARVIS AI Assistant")
+    parser = argparse.ArgumentParser(description="ASHU AI Assistant")
     parser.add_argument("--text", action="store_true", help="Run in text mode (no voice I/O)")
     args = parser.parse_args()
 
